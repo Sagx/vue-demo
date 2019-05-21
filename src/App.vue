@@ -3,13 +3,11 @@
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <RuleDemo></RuleDemo>
-    <AuthorComponent></AuthorComponent>
   </div>
 </template>
 
 <script>
   //引入组件
-  import AuthorComponent from './components/AuthorComponent'
   import RuleDemo from './components/RuleDemo'
   export default {
     name: 'app',
@@ -18,7 +16,7 @@
         msg: 'Welcome to Your Vue App'
       }
     },
-    components:{ AuthorComponent, RuleDemo }  //注册组件
+    components:{ RuleDemo }  //注册组件
   }
 </script>
 
@@ -31,21 +29,17 @@
   color: #2c3e50;
   margin-top: 60px;
 }
-
 h1, h2 {
   font-weight: normal;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 li {
   display: inline-block;
   margin: 0 10px;
 }
-
 a {
   color: #42b983;
 }
