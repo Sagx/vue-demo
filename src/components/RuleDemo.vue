@@ -12,9 +12,15 @@
         {{ r.text }}
       </li>
     </ol>
+    <!-- vue指令可以以冒号的形式绑定标签属性 -->
+    <p><a v-bind:href="aUrl">这个a标签的url是可以动态改变的</a></p>
+    <!-- 上边v-bind的缩写用法 -->
+    <p><a :href="aUrl">这个a标签的url是可以动态改变的</a></p>
     <!-- 按钮绑定方法 -->
     <p>{{ egMsg }}</p>
     <button v-on:click="reverseMsg">逆转上边的消息</button>
+    <!-- 上边v-on的缩写用法 -->
+    <button @click="reverseMsg">逆转上边的消息</button>
     <!-- 数据的双向绑定 -->
     <label>
       数据的双向绑定:
@@ -43,6 +49,7 @@
       data() {
         return {
           egMsg: '123456',
+          aUrl: 'https://www.bilibili.com',
           message: '页面加载于 ' + new Date().toLocaleString(),
           seen: true,
           results: [
